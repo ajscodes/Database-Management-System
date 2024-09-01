@@ -20,7 +20,7 @@ INSERT INTO SALES_DATA (Region, Product, Sales_Amount, Year) VALUES
 SELECT * FROM SALES_DATA;
 
 
---Part – A: 
+--Part â€“ A: 
 --1. Display Total Sales Amount by Region. 
 SELECT 
 	Region,SUM(Sales_Amount) AS TOTAL_SALE_AMOUNT 
@@ -101,8 +101,7 @@ GROUP BY Region
 ORDER BY SUM(Sales_Amount);
 
 
-
---Part – B: 
+--Part â€“ B: 
 --1. Display Count of Orders by Year and Region, Sorted by Year and Region 
 SELECT
 	Year AS YEAR, Region, COUNT(*) AS ORDER_COUNT
@@ -138,7 +137,7 @@ ORDER BY TOTAL_SALES DESC;
 
 
 
---Part – C: 
+--Part â€“ C: 
 --1. Display Products with Average Sales Amount Between 1000 and 2000, Ordered by Product Name 
 SELECT 
 	Product, AVG(Sales_Amount) AS AVG_SALES
