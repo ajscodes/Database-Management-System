@@ -146,6 +146,7 @@ GROUP BY Product
 HAVING AVG(Sales_Amount) BETWEEN 1000 AND 2000
 ORDER BY Product;
 
+
 --2. Display Years with More Than 5 Orders from Each Region 
 
 
