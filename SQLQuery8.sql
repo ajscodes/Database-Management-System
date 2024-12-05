@@ -20,7 +20,7 @@ INSERT INTO SALES_DATA (Region, Product, Sales_Amount, Year) VALUES
 SELECT * FROM SALES_DATA;
 
 
---Part â€“ A: 
+--Part – A: 
 --1. Display Total Sales Amount by Region. 
 SELECT 
 	Region,SUM(Sales_Amount) AS TOTAL_SALE_AMOUNT 
@@ -101,7 +101,8 @@ GROUP BY Region
 ORDER BY SUM(Sales_Amount);
 
 
---Part â€“ B: 
+
+--Part – B: 
 --1. Display Count of Orders by Year and Region, Sorted by Year and Region 
 SELECT
 	Year AS YEAR, Region, COUNT(*) AS ORDER_COUNT
@@ -137,7 +138,7 @@ ORDER BY TOTAL_SALES DESC;
 
 
 
---Part â€“ C: 
+--Part – C: 
 --1. Display Products with Average Sales Amount Between 1000 and 2000, Ordered by Product Name 
 SELECT 
 	Product, AVG(Sales_Amount) AS AVG_SALES
@@ -145,15 +146,3 @@ FROM SALES_DATA
 GROUP BY Product
 HAVING AVG(Sales_Amount) BETWEEN 1000 AND 2000
 ORDER BY Product;
-
-
---2. Display Years with More Than 5 Orders from Each Region 
-
-
---3. Display Regions with Average Sales Amount Above 1500 in Year 2023 sort by amount in descending. 
-
-
---4. Find out region wise duplicate product. 
-
-
---5. Find out region wise highest sales amount.
