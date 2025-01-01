@@ -64,11 +64,53 @@ SELECT distinct genre
 FROM Songs
 
 --2. Find top 2 albums released before 2010. 
+SELECT TOP 2 *
+FROM Albums
+WHERE Release_year < 2010
+
 --3. Insert Data into the Songs Table. (1245, ‘Zaroor’, 2.55, ‘Feel good’, 1005) 
+INSERT INTO Songs VALUES (1245, 'Zaroor', 2.55, 'Feel good', 1005);
+
 --4. Change the Genre of the song ‘Zaroor’ to ‘Happy’ 
+UPDATE Songs
+SET Genre = 'Happy'
+WHERE Song_title = 'Zaroor'
+
 --5. Delete an Artist ‘Ed Sheeran’ 
+DELETE 
+FROM Songs
+WHERE Album_id IN (
+	SELECT Album_id 
+	FROM Albums
+	WHERE Artist_id IN (
+		SELECT Artist_id
+		FROM Artists
+		WHERE Artist_name = 'Ed Sheeran'
+		)
+	)
+
+DELETE 
+FROM Albums
+WHERE Artist_id IN (
+	SELECT Artist_id 
+	FROM Artists
+	WHERE Artist_name = 'Ed Sheeran'
+	)
+
+DELETE
+FROM Artists
+WHERE Artist_name = 'Ed SHeeran'
+
+SELECT * FROM Artists WHERE Artist_name = 'Ed Sheeran';
+
 --6. Add a New Column for Rating in Songs Table. [Ratings decimal(3,2)] 
+ALTER TABLE Songs
+ADD Rating decimal(3,2)
+
+select * from Songs;
+
 --7. Retrieve songs whose title starts with 'S'. 
+
 --8. Retrieve all songs whose title contains 'Everybody'. 
 --9. Display Artist Name in Uppercase. 
 --10. Find the Square Root of the Duration of a Song ‘Good Luck’ 
