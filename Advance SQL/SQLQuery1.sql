@@ -110,6 +110,9 @@ ADD Rating decimal(3,2)
 select * from Songs;
 
 --7. Retrieve songs whose title starts with 'S'. 
+SELECT *
+FROM Songs
+WHERE Song_title LIKE 'S%'
 
 --8. Retrieve all songs whose title contains 'Everybody'. 
 --9. Display Artist Name in Uppercase. 
