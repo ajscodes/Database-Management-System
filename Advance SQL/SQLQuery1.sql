@@ -115,9 +115,24 @@ FROM Songs
 WHERE Song_title LIKE 'S%'
 
 --8. Retrieve all songs whose title contains 'Everybody'. 
+SELECT *
+FROM Songs
+WHERE Song_title LIKE '%EVERYBODY%'
+
 --9. Display Artist Name in Uppercase. 
+SELECT UPPER(Artist_name)
+FROM Artists
+
 --10. Find the Square Root of the Duration of a Song ‘Good Luck’ 
+SELECT SQRT(Duration)
+FROM Songs
+WHERE Song_title = 'Good Luck'
+
 --11. Find Current Date. 
+SELECT GETDATE() AS 'Current_Date';
+
 --12. Find the number of albums for each artist. 
+
+
 --13. Retrieve the Album_id which has more than 5 songs in it. 
 --14. Retrieve all songs from the album 'Album1'. (using Subquery) 
