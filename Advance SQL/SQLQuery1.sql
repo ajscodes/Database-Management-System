@@ -58,7 +58,7 @@ SELECT * FROM Albums;
 SELECT * FROM Songs;
 
 
---Part – A 
+--Part â€“ A 
 --1. Retrieve a unique genre of songs. 
 SELECT distinct genre
 FROM Songs
@@ -68,15 +68,15 @@ SELECT TOP 2 *
 FROM Albums
 WHERE Release_year < 2010
 
---3. Insert Data into the Songs Table. (1245, ‘Zaroor’, 2.55, ‘Feel good’, 1005) 
+--3. Insert Data into the Songs Table. (1245, â€˜Zaroorâ€™, 2.55, â€˜Feel goodâ€™, 1005) 
 INSERT INTO Songs VALUES (1245, 'Zaroor', 2.55, 'Feel good', 1005);
 
---4. Change the Genre of the song ‘Zaroor’ to ‘Happy’ 
+--4. Change the Genre of the song â€˜Zaroorâ€™ to â€˜Happyâ€™ 
 UPDATE Songs
 SET Genre = 'Happy'
 WHERE Song_title = 'Zaroor'
 
---5. Delete an Artist ‘Ed Sheeran’ 
+--5. Delete an Artist â€˜Ed Sheeranâ€™ 
 DELETE 
 FROM Songs
 WHERE Album_id IN (
@@ -123,7 +123,7 @@ WHERE Song_title LIKE '%EVERYBODY%'
 SELECT UPPER(Artist_name)
 FROM Artists
 
---10. Find the Square Root of the Duration of a Song ‘Good Luck’ 
+--10. Find the Square Root of the Duration of a Song â€˜Good Luckâ€™ 
 SELECT SQRT(Duration)
 FROM Songs
 WHERE Song_title = 'Good Luck'
@@ -132,7 +132,6 @@ WHERE Song_title = 'Good Luck'
 SELECT GETDATE() AS 'Current_Date';
 
 --12. Find the number of albums for each artist. 
-
 
 --13. Retrieve the Album_id which has more than 5 songs in it. 
 --14. Retrieve all songs from the album 'Album1'. (using Subquery) 
