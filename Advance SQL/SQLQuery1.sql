@@ -132,6 +132,5 @@ WHERE Song_title = 'Good Luck'
 SELECT GETDATE() AS 'Current_Date';
 
 --12. Find the number of albums for each artist. 
-
 --13. Retrieve the Album_id which has more than 5 songs in it. 
 --14. Retrieve all songs from the album 'Album1'. (using Subquery) 
